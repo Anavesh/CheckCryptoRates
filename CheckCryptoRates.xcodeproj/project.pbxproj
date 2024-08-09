@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		A5E391692C64F89A00DEAC7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391682C64F89A00DEAC7D /* AppDelegate.swift */; };
 		A5E3916B2C64F89A00DEAC7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3916A2C64F89A00DEAC7D /* SceneDelegate.swift */; };
-		A5E3916D2C64F89A00DEAC7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3916C2C64F89A00DEAC7D /* ViewController.swift */; };
+		A5E3916D2C64F89A00DEAC7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3916C2C64F89A00DEAC7D /* MainViewController.swift */; };
 		A5E391722C64F89D00DEAC7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E391712C64F89D00DEAC7D /* Assets.xcassets */; };
 		A5E391752C64F89D00DEAC7D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A5E391742C64F89D00DEAC7D /* Base */; };
+		A5E391842C6653E100DEAC7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391832C6653E100DEAC7D /* Constants.swift */; };
+		A5E391862C66571C00DEAC7D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391852C66571C00DEAC7D /* Coin.swift */; };
+		A5E391882C66592E00DEAC7D /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E391872C66592E00DEAC7D /* CoinCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A5E391652C64F89A00DEAC7D /* CheckCryptoRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckCryptoRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E391682C64F89A00DEAC7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E3916A2C64F89A00DEAC7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5E3916C2C64F89A00DEAC7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5E3916C2C64F89A00DEAC7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A5E391712C64F89D00DEAC7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5E391742C64F89D00DEAC7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5E391762C64F89D00DEAC7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E391832C6653E100DEAC7D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A5E391852C66571C00DEAC7D /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		A5E391872C66592E00DEAC7D /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				A5E3917C2C64F8D000DEAC7D /* Application */,
-				A5E391682C64F89A00DEAC7D /* AppDelegate.swift */,
-				A5E3916A2C64F89A00DEAC7D /* SceneDelegate.swift */,
-				A5E3916C2C64F89A00DEAC7D /* ViewController.swift */,
-				A5E391712C64F89D00DEAC7D /* Assets.xcassets */,
-				A5E391732C64F89D00DEAC7D /* LaunchScreen.storyboard */,
+				A5E3917F2C64FA3C00DEAC7D /* Controllers */,
+				A5E391812C64FA4F00DEAC7D /* ViewModels */,
+				A5E391802C64FA4700DEAC7D /* Views */,
+				A5E3917E2C64FA3500DEAC7D /* Models */,
+				A5E3917D2C64FA2E00DEAC7D /* API */,
+				A5E391822C64FA5900DEAC7D /* Other */,
 				A5E391762C64F89D00DEAC7D /* Info.plist */,
 			);
 			path = CheckCryptoRates;
@@ -68,8 +75,58 @@
 		A5E3917C2C64F8D000DEAC7D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				A5E391682C64F89A00DEAC7D /* AppDelegate.swift */,
+				A5E3916A2C64F89A00DEAC7D /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		A5E3917D2C64FA2E00DEAC7D /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A5E3917E2C64FA3500DEAC7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5E391852C66571C00DEAC7D /* Coin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5E3917F2C64FA3C00DEAC7D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5E3916C2C64F89A00DEAC7D /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5E391802C64FA4700DEAC7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5E391872C66592E00DEAC7D /* CoinCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5E391812C64FA4F00DEAC7D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A5E391822C64FA5900DEAC7D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A5E391712C64F89D00DEAC7D /* Assets.xcassets */,
+				A5E391732C64F89D00DEAC7D /* LaunchScreen.storyboard */,
+				A5E391832C6653E100DEAC7D /* Constants.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E3916D2C64F89A00DEAC7D /* ViewController.swift in Sources */,
+				A5E3916D2C64F89A00DEAC7D /* MainViewController.swift in Sources */,
 				A5E391692C64F89A00DEAC7D /* AppDelegate.swift in Sources */,
 				A5E3916B2C64F89A00DEAC7D /* SceneDelegate.swift in Sources */,
+				A5E391862C66571C00DEAC7D /* Coin.swift in Sources */,
+				A5E391882C66592E00DEAC7D /* CoinCell.swift in Sources */,
+				A5E391842C6653E100DEAC7D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
